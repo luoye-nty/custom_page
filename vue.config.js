@@ -51,6 +51,7 @@ module.exports = {
         // proxy: 'http://localhost:8080'   // 配置跨域处理,只有一个代理
         proxy: { //配置多个跨域
             "/api": {
+                // target: "https://xiaohuihui.love/custom_game/",
                 target: "http://localhost:18023",
                 changeOrigin: true,
                 // ws: true,//websocket支持
