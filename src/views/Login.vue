@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import axios from 'axios';
+    import http from '../utils/http'
     export default {
         data () {
             return {
@@ -19,10 +19,13 @@
         },
         methods: {
             login () {
-                axios.defaults.headers.common["token"] = "baced";
-                axios.post("/api/userInfo/login",this.loginForm).then(response=>(
-                    console.log(response)
-                ))
+                //axios.defaults.headers.common["token"] = "baced";
+                http.post("/api/userInfo/login",this.loginForm).then(res=>{
+                    console.log(res)
+                }).catch(err=>{
+                    console.error("cuowu")
+                })
+
             }
         }
     };

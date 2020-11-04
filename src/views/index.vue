@@ -6,7 +6,7 @@
             </div>
             <div class="menu_body">
                 <div class="menu_button" @click="loginDialog"><span>登录入口</span></div>
-                <div class="menu_button" @click="tips"><span>开发中</span></div>
+                <div class="menu_button" @click="login"><span>开发中</span></div>
                 <div class="menu_button" @click="tips"><span>开发中</span></div>
                 <div class="menu_button" @click="tips"><span>开发中</span></div>
                 <div class="menu_button" @click="tips"><span>开发中</span></div>
@@ -52,6 +52,9 @@
                         done();
                     })
                     .catch(_ => {});
+            },
+            login(){
+                this.$router.push({path:'/login'});
             }
         }
     }
